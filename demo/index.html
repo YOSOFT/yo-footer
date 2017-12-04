@@ -1,30 +1,70 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
-    <title>yo-footer demo</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
-    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+  <title>yo-footer demo</title>
 
-    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
-    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
-    <link rel="import" href="../yo-footer.html">
+  <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
 
-    <custom-style>
-      <style is="custom-style" include="demo-pages-shared-styles">
-      </style>
-    </custom-style>
-  </head>
-  <body>
-    <div class="vertical-section-container centered">
-      <h3>Basic yo-footer demo</h3>
-      <demo-snippet>
-        <template>
-          <yo-footer></yo-footer>
-        </template>
-      </demo-snippet>
-    </div>
-  </body>
+  <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+  <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+  <link rel="import" href="../yo-footer.html">
+
+  <custom-style>
+    <style is="custom-style" include="demo-pages-shared-styles">
+      yo-footer {
+        height: 350px;
+        background-color: #63012A;
+        color: white;
+      }
+
+      yo-footer .col2 a,
+      yo-footer .col3 a,
+      yo-footer .col4 a {
+        text-decoration: none;
+        color: white;
+        font-weight: 100;
+        display: block;
+      }
+    </style>
+  </custom-style>
+</head>
+
+<body>
+  <div class="vertical-section-container centered">
+    <h3>Basic yo-footer demo</h3>
+    <demo-snippet>
+      <template>
+        <yo-footer copyright texto-copyright="2017. Diseñado por Plataforma ABC">
+          <div class="col1">
+            <h1>PLATAFORMA ABC</h1>
+          </div>
+          <div class="col2">
+            <h1>Cursos</h1>
+            <a href="">Habilidades Comunales</a>
+            <a href="">Liderazgo</a>
+            <a href="">Emprendimiento</a>
+          </div>
+          <div class="col3">
+            <h1>Acerca de</h1>
+            <a href="">Sobre nosotros</a>
+            <a href="">Misión</a>
+            <a href="">Visión</a>
+          </div>
+          <div class="col4">
+            <h1>Contáctanos</h1>
+            <a href="">Línea de atención nacional</a>
+            <a href="tel:+573208578851">3208578851</a>
+
+            <a href="mailto:webmaster@example.com">info@plataformaabc.com</a>
+          </div>
+        </yo-footer>
+      </template>
+    </demo-snippet>
+  </div>
+</body>
+
 </html>

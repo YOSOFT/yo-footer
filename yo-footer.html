@@ -1,13 +1,44 @@
 <link rel="import" href="../polymer/polymer-element.html">
-
+<link rel="import" href="../iron-flex-layout/iron-flex-layout.html">
 <dom-module id="yo-footer">
   <template>
     <style>
       :host {
-        display: block;
+        /* reset */
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+
+        @apply --layout-horizontal;
+        @apply --layout-wrap;
+        @apply --layout-around-justified;
+        @apply --layout-center;
       }
+
+      .copyright{
+        display: none;
+      }
+      :host([copyright]) .copyright {
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 10px 20px;
+        font-weight: 100;
+        font-size: 10px;
+      }
+
     </style>
-    <h2>Hello [[prop1]]!</h2>
+    <slot></slot>
+    <div class="copyright">
+      <div>
+        © Copyright [[textoCopyright]]
+      </div>
+    </div>
   </template>
 
   <script>
@@ -23,7 +54,7 @@
       static get is() { return 'yo-footer'; }
       static get properties() {
         return {
-          prop1: {
+          textoCopyright: {
             type: String,
             value: 'yo-footer'
           }
